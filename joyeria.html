@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Joyería Elegante</title>
+    <style>
+ body {
+            background-image: url("fondo.jpg"); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+            background-attachment: fixed; /* Fijar la imagen en su lugar */
+        }
+        
+        /* Estilo para el contenido de la página */
+        .content {
+            text-align: center;
+            padding: 100px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #E3DDDD;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+         
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #F3F0F0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #555;
+        }
+
+        p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .highlight {
+            color: #ff6600;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+       img {
+            width: 400px; /* Ancho inicial */
+            transition: width 0.5s; /* Transición suave */
+            cursor: pointer; /* Cambia el cursor al hacer hover */
+            }
+
+        #imagenAmpliada {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+          {
+th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Joyería Elegante</h1>
+        <p>Tu destino para joyas exquisitas</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nuestra Colección</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Nuestra Colección de Joyas</h2>
+        <p>Descubre nuestra impresionante colección de joyas hechas a mano con los materiales más finos.</p>
+        <ul>
+            <li>Anillos de Diamantes</li>
+ <table>
+        <tr>
+            <th>Imagen</th>
+            
+        </tr>
+       
+            <td><img src="di1.jpg" alt="Imagen 1" onclick="ampliarImagen('di1.jpg', 'Anillo de compromiso en oro blanco de 18K, con diamnte')"></td>
+            
+     
+            <td><img src="di2.jpg" alt="Imagen 2" onclick="ampliarImagen('di2.jpg', 'Anillo de compromiso en oro blanco de 14K, con diamante')"></td>
+            
+    
+            <td><img src="di3.jpg" alt="Imagen 3" onclick="ampliarImagen('di3.jpg', 'Anillo de compromiso en oro amarillo de 18K, con diamante')"></td>
+           
+     
+    </table>
+
+    <div id="imagenAmpliada">
+        <img id="imagenAmpliadaSrc" src="" alt="">
+        <p id="descripcionAmpliada"></p>
+    </div>
+
+    <script>
+        function ampliarImagen(src, descripcion) {
+            var imagenAmpliada = document.getElementById("imagenAmpliada");
+            var imagenAmpliadaSrc = document.getElementById("imagenAmpliadaSrc");
+            var descripcionAmpliada = document.getElementById("descripcionAmpliada");
+
+            imagenAmpliada.style.display = "block";
+            imagenAmpliadaSrc.src = src;
+            descripcionAmpliada.innerHTML = descripcion;
+ // Cerrar la imagen agrandada al hacer clic en ella
+        document.getElementById("imagenAmpliada").addEventListener("click", function() {
+            this.style.display = "none"; /* Ocultar la imagen ampliada */
+        });
+
+
+        }
+
+    </script>
+       
+            <li>Collares de Perlas</li>
+<table>
+        <tr>
+            <td><img src="p1.jpg" alt="Figura 1" onclick="ampliarImagen('p1.jpg', 'Collar de perlas')"></td>
+            <td><img src="p2.jpg" alt="Figura 2" onclick="ampliarImagen('p2.jpg', 'Collar de perlas con inicial')"></td>
+            <td><img src="p3.jpg" alt="Figura 3" onclick="ampliarImagen('p3.jpg', 'Collar de perlas con estrellas')"></td>
+            
+        </tr>
+    </table>
+<div id="imagenAmpliada">
+        <img id="imagenAmpliadaSrc" src="" alt="">
+        <p id="descripcionAmpliada"></p>
+    </div>
+
+    <script>
+        function ampliarImagen(src, descripcion) {
+            var imagenAmpliada = document.getElementById("imagenAmpliada");
+            var imagenAmpliadaSrc = document.getElementById("imagenAmpliadaSrc");
+            var descripcionAmpliada = document.getElementById("descripcionAmpliada");
+
+            imagenAmpliada.style.display = "block";
+            imagenAmpliadaSrc.src = src;
+            descripcionAmpliada.innerHTML = descripcion;
+ // Cerrar la imagen agrandada al hacer clic en ella
+        document.getElementById("imagenAmpliada").addEventListener("click", function() {
+            this.style.display = "none"; /* Ocultar la imagen ampliada */
+        });
+
+
+        }
+
+    </script>
+
+            <li><i>Pulseras de Oro</li></i>
+<table>
+        <tr>
+            <td><img src="o1.jpg" alt="Figura 1" onclick="ampliarImagen('o1.jpg', 'Pulsera cadena en oro de 14K')"></td>
+            <td><img src="o2.jpg" alt="Figura 2" onclick="ampliarImagen('o2.jpg', 'pulsera torsal en oro de 14K')"></td>
+            <td><img src="o3.jpg" alt="Figura 3" onclick="ampliarImagen('o3.jpg', 'Pulsera figaro en oro de 10K')"></td>
+            
+        </tr>
+    </table>
+<div id="imagenAmpliada">
+        <img id="imagenAmpliadaSrc" src="" alt="">
+        <p id="descripcionAmpliada"></p>
+    </div>
+
+    <script>
+        function ampliarImagen(src, descripcion) {
+            var imagenAmpliada = document.getElementById("imagenAmpliada");
+            var imagenAmpliadaSrc = document.getElementById("imagenAmpliadaSrc");
+            var descripcionAmpliada = document.getElementById("descripcionAmpliada");
+
+            imagenAmpliada.style.display = "block";
+            imagenAmpliadaSrc.src = src;
+            descripcionAmpliada.innerHTML = descripcion;
+ // Cerrar la imagen agrandada al hacer clic en ella
+        document.getElementById("imagenAmpliada").addEventListener("click", function() {
+            this.style.display = "none"; /* Ocultar la imagen ampliada */
+        });
+
+
+        }
+
+    </script>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Servicios Personalizados</h2>
+        <p>Ofrecemos servicios de diseño de joyas personalizadas y reparación de joyas.</p>
+        <p>Contactanos para cualquier duda o informacion a:</p>
+        <p><a href="joyeriaelegante@gmail.com">joyeriaelegante@gmail.com</a></p>
+    </section>
+ <form id="formularioCompra">
+    <h2>Registro de Compra</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="producto">Producto:</label>
+    <input type="text" id="producto" name="producto" required>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" name="precio" step="0.01" required>
+
+    <button type="button" onclick="realizarCompra()">Realizar Compra</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    function realizarCompra() {
+        // Obtener valores del formulario
+        var nombre = document.getElementById('nombre').value;
+        var producto = document.getElementById('producto').value;
+        var precio = parseFloat(document.getElementById('precio').value);
+
+        // Validar que el precio sea un número válido
+        if (isNaN(precio) || precio <= 0) {
+            alert('Por favor, ingrese un precio válido.');
+            return;
+        }
+
+        // Calcular el impuesto (por ejemplo, 10%)
+        var impuesto = precio * 0.10;
+
+        // Calcular el total
+        var total = precio + impuesto;
+
+        // Mostrar resultado
+        var resultadoHTML = `
+            <h2>Resumen de Compra</h2>
+            <p><strong>Nombre:</strong> ${nombre}</p>
+            <p><strong>Producto:</strong> ${producto}</p>
+            <p><strong>Precio:</strong> $${precio.toFixed(2)}</p>
+            <p><strong>Impuesto:</strong> $${impuesto.toFixed(2)}</p>
+            <p><strong>Total:</strong> $${total.toFixed(2)}</p>
+        `;
+
+        document.getElementById('resultado').innerHTML = resultadoHTML;
+    }
+</script>
+
+    <footer>
+        <p>&copy; 2023 Joyería Elegante</p>
+    </footer>
+</body>
+</html>
